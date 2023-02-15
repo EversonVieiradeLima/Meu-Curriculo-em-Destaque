@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Projeto pessoal de uma plataforma fácil e acessível para criar currículos profissionais. Você pode criar um currículo que reflita sua identidade profissional e destaque suas habilidades, experiências e realizações. Além disso, você pode salva-lo em PDF</p>
+<p align="left">Projeto pessoal de uma plataforma fácil e acessível para criar currículos profissionais. Você pode criar um currículo que reflita sua identidade profissional e destaque suas habilidades, experiências e realizaçõ. Além disso, você pode salva-lo em PDF</p>
 
 ###
 
