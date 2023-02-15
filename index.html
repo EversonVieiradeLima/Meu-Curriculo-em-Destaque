@@ -47,6 +47,8 @@
       <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-formacaoEConhecimentos/inputConclusao.css">
       <link rel="stylesheet" href="./CSS/index/main/campos/campos-cursosOuEventos.css">
       <link rel="stylesheet" href="./CSS/index/main/campos/campos-cursosOuEventos-descricao.css">
+      <link rel="stylesheet" href="./CSS/index/main/idiomas/campos-conhecimentos.css">
+      <link rel="stylesheet" href="./CSS/index/main/idiomas/input--idiomas.css">
       <link rel="stylesheet" href="./CSS/index/main/campos/campos-objetivosProfissionais.css">
       <link rel="stylesheet" href="./CSS/index/main/textarea--padrao.css">
       <link rel="stylesheet" href="./CSS/index/main/campos/campos-miniCurriculo.css">
@@ -359,6 +361,46 @@
                   </div>
 
                   <input type="button" id="inputButton-adicionarCursos" class="inputButton" data-inputButton-adicionarCursos onclick="botaoAdicionarCursos()" value="Adicionar + Cursos/Eventos">
+
+                  <div data-conhecimentosEmIdiomas>
+
+                     <div class="campos__conhecimentos">
+                        <h4 class="subtopicos">Conhecimentos em Idiomas</h4>
+                        <div class="campos--comuns campos__conhecimentos__idioma">
+                           <label for="inputIdioma1">Idioma:</label>
+                           <input type="text" name="idioma1" id="inputIdioma1" class="inputIdioma input-idiomas" data-inputIdioma1>
+                        </div>
+
+                        <div class="campos--comuns campos__conhecimentos__compreesao">
+                           <label for="inputCompreesao1">Compreensão:</label>
+                           <input list="opcoesGrausIdiomas" name="compreesao1" id="inputCompreesao1" class="inputCompreesao input-idiomas" data-inputCompreesao1>
+                           <datalist id="opcoesGrausIdiomas">
+                              <option value="Pouco">
+                              <option value="Suficiente">
+                              <option value="Boa">
+                              <option value="Excelente">
+                           </datalist>
+                        </div>
+
+                        <div class="campos--comuns campos__conhecimentos__escrita">
+                           <label for="inputEscrita1">Escrita:</label>
+                           <input list="opcoesGrausIdiomas" name="escrita1" id="inputEscrita1" class="inputEscrita input-idiomas" data-inputEscrita1>
+                        </div>
+
+                        <div class="campos--comuns campos__conhecimentos__fala">
+                           <label for="inputFala1">Fala:</label>
+                           <input list="opcoesGrausIdiomas" name="fala1" id="inputFala1" class="inputFala input-idiomas" data-inputFala1>
+                        </div>
+
+                        <div class="campos--comuns campos__conhecimentos__leitura">
+                           <label for="inputLeitura1">Leitura:</label>
+                           <input list="opcoesGrausIdiomas" name="leitura1" id="inputLeitura1" class="inputLeitura input-idiomas" data-inputLeitura1>
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <input type="button" id="inputButton-adicionarIdiomas" class="inputButton" data-inputButton-adicionarIdiomas onclick="" value="Adicionar + Idiomas">
 
                </div>
 
