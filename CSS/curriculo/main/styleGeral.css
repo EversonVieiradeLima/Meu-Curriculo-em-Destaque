@@ -1,0 +1,42 @@
+#nacionalidade, #idade, #endereco, #bairro, #cep, #cidade, #estado {
+   display: inline-block;
+}
+
+#nacionalidade, #endereco {
+   margin-right: -0.3125rem;
+}
+
+#idade .option, #bairro .option {
+   font-weight: normal;
+}
+
+#idade .option, #idade .idade, #bairro .option, #bairro .bairro, #cep p, #cidade .option, #cidade .cidade, #estado .option, #estado .estado {
+   display: inline-block;
+}
+
+#conjunto_localizacao, #celular1, #celular2 {
+   margin-bottom: 0;
+}
+
+#cidade .option, #estado .option {
+   margin: 0 0.3125rem 0 0.3125rem;
+}
+
+#resumo .option, #objetivos .option {
+   margin: 1rem 0;
+   font-size: 1.25rem;
+}
+
+.resumo, .objetivos {
+   margin: 0 0 2.5rem 0;
+}
+
+#escolaridade .option {
+   font-size: 1.25rem;
+   margin: 0 0 1rem 0;
+}
+
+#semestre, #instituicao, #duracao, #anoConclusao {
+   display: flex;
+   margin: 0.9375rem 0 0 0;
+}

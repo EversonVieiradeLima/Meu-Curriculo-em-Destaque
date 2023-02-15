@@ -1,0 +1,21 @@
+.inputButton {
+   height: 1.25rem;
+   font-weight: bold;
+   background: #ffbe0b;
+   color: black;
+   margin-right: 4rem;
+   padding: 1rem;
+   padding-bottom: 1.75rem;
+   border: none;
+   transition: background .3s;
+}
+
+.inputButton:hover {
+   cursor: pointer;
+   background: #fba300;
+}
+
+.inputButton:active {
+   background:  #070d19;
+   color: white;
+}

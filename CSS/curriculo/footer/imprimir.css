@@ -1,0 +1,13 @@
+.imprimir {
+   padding: 1rem;
+   font-weight: bold;
+   background: #f6ae2d;
+   border: none;
+   border-radius: 5px;
+   transition: background .3s;
+}
+
+.imprimir:hover {
+   cursor: pointer;
+   background: #f89512;
+}

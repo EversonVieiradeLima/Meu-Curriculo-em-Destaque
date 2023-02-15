@@ -1,0 +1,12 @@
+.cabecalhoTopico__camposObrigatorios {
+   display: flex;
+   font-size: 0.8125rem;
+}
+
+.cabecalhoTopico__camposObrigatorios p {
+   font-style: italic;
+}
+
+.asterisco {
+   color: #ff0000;
+}

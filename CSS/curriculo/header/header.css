@@ -1,0 +1,11 @@
+header {
+   align-items: flex-end;
+   display: flex;
+   margin: 1.125rem 0.625rem 3.125rem 8rem;
+}
+
+@media print {
+   header {
+      margin: 1.125rem 0.625rem 3.125rem 0.625rem;
+   }
+}

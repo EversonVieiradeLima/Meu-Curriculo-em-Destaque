@@ -1,0 +1,12 @@
+.campos__cursosOuEventos__descricao {
+   align-items: flex-start;
+   flex-direction: column;
+}
+
+.campos__cursosOuEventos__descricao label {
+   margin-bottom: 0.8125rem;
+}
+
+.campos__cursosOuEventos__descricao textarea {
+   margin-left: 2.5rem;
+}

@@ -1,0 +1,29 @@
+body {
+   background: #070d19;
+   color: #ffffff;
+}
+
+::-webkit-scrollbar {
+   width: 1vw;
+   background-color: #000511;
+}
+
+::-webkit-scrollbar-button {
+   background: #14171f;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #ffbe0b;
+   border-radius: 20px;
+}
+
+label {
+   margin-right: 0.9375rem;
+}
+
+footer {
+   text-align: center;
+   margin-bottom: 1.5rem;
+   font-style: italic;
+   font-size: 0.8125rem;
+}

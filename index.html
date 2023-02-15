@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./CSS/reset.css">
+      <link rel="stylesheet" href="./CSS/index/style.css">
+      <link rel="stylesheet" href="./CSS/index/header/cabecalho.css">
+      <link rel="stylesheet" href="./CSS/index/header/cabecalho--box.css">
+      <link rel="stylesheet" href="./CSS/index/header/cabecalho-imagem.css">
+      <link rel="stylesheet" href="./CSS/index/header/cabecalho-titulo.css">
+      <link rel="stylesheet" href="./CSS/index/main/corpo.css">
+      <link rel="stylesheet" href="./CSS/index/main/dados.css">
+      <link rel="stylesheet" href="./CSS/index/main/cabecalhoTopico/cabecalhoTopico.css">
+      <link rel="stylesheet" href="./CSS/index/main/cabecalhoTopico/cabecalhoTopico-imagem.css">
+      <link rel="stylesheet" href="./CSS/index/main/cabecalhoTopico/cabecalhoTopico-titulo.css">
+      <link rel="stylesheet" href="./CSS/index/main/cabecalhoTopico/cabecalhoTopico-camposObrigatorios.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos--comuns.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/input.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputNomeCompleto.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputNacionalidade.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputNumero.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputIdade.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/input--descricao.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputEndereco.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputBairro.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputCep.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputEstado.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputCidade.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos-email.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputEmail.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos-redesSociais.css">
+      <link rel="stylesheet" href="./CSS/index/main/subtopicos.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos--comuns--espacamentos.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputLinkedin.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputs-dadosPessoais-informacoesAdicionais/inputEmpregado.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputs-dadosPessoais-informacoesAdicionais/inputHabilitacao.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputs-dadosPessoais-informacoesAdicionais/inputAutomovel.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputs-dadosPessoais-informacoesAdicionais/inputViagens.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-dadosPessoais/inputs-dadosPessoais-informacoesAdicionais/inputMudarSe.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-formacaoEConhecimentos/inputEscolaridade.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-formacaoEConhecimentos/inputCurso.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-formacaoEConhecimentos/inputSemestre.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-formacaoEConhecimentos/inputInstituicao.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-formacaoEConhecimentos/inputDuracao.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-formacaoEConhecimentos/inputConclusao.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos-cursosOuEventos.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos-cursosOuEventos-descricao.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos-objetivosProfissionais.css">
+      <link rel="stylesheet" href="./CSS/index/main/textarea--padrao.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos-miniCurriculo.css">
+      <link rel="stylesheet" href="./CSS/index/main/campos/campos-experiencias-atividades.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-objetivosEExperiencias/inputNomeDaEmpresa.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-objetivosEExperiencias/inputCargo.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-objetivosEExperiencias/inputEstadoDaEmpresa.css">
+      <link rel="stylesheet" href="./CSS/index/main/inputs/inputs-objetivosEExperiencias/inputCidadeDaEmpresa.css">
+      <link rel="stylesheet" href="./CSS/index/main/linhaDivisoria.css">
+
+      <link rel="stylesheet" href="./CSS/index/main/botoes/botoes.css">
+      <link rel="stylesheet" href="./CSS/index/main/botoes/inputButton.css">
+      <link rel="stylesheet" href="./CSS/index/main/botoes/visualizarCurriculo.css">
+
+      <title>Meu Currículo em Destaque</title>
+   </head>
+   <body>
+      <header class="cabecalho">
+            <div class="cabecalho--box">
+               <img class="cabecalho__imagem" src="./Imagens/logo-curriculo.png" loading="lazy">
+               <h1 class="cabecalho__titulo">Seu Currículo em Destaque</h1>
+            </div>
+      </header>
+   
+      <main class="corpo">
+         <form action="" class="formulário" autocomplete="off">
+
+            <div class="dados dadosPessoais">
+
+               <div class="cabecalhoTopico">
+                  <img class="cabecalhoTopico__imagem" src="https://cdn-icons-png.flaticon.com/128/3106/3106921.png" loading="lazy">
+                  <h2 class="cabecalhoTopico__titulo">Dados Pessoais</h2>
+                  <div class="cabecalhoTopico__camposObrigatorios">
+                     <p><b class="asterisco">*</b> Campos obrigatórios</p>
+                  </div>
+               </div>
+
+               <div class="campos">
+
+                  <div class="campos--comuns campos__nomeCompleto">
+                     <label for="inputNomeCompleto">Nome completo:<b class="asterisco">*</b></label>
+                     <input type="text" name="nomeCompleto" id="inputNomeCompleto" class="inputNomeCompleto" data-inputNomeCompleto onkeypress="EnterTab('inputNacionalidade')" autofocus required minlength="14">
+                  </div>
+
+                  <div class="campos--comuns campos__nacionalidade">
+                     <label for="inputNacionalidade">Nacionalidade:</label>
+                     <input type="text" name="nacionalidade" id="inputNacionalidade" class="inputNacionalidade" data-inputNacionalidade onkeypress="EnterTab('inputNumero1')">
+                  </div>
+
+                  <div class="campos--comuns campos__celular1">
+                     <label for="inputNumero1">Celular 1:<b class="asterisco">*</b></label>
+                     <input type="text" name="celular1" id="inputNumero1" class="inputNumero" data-inputNumero1 onkeypress="mascaraTelefone(this);EnterTab('inputNumero2')" required pattern="[0-9. ()]+-[0-9]{4}$" title="ex:(12) 91234-5678" />
+                  </div>
+
+                  <div class="campos--comuns campos__celular2">
+                     <label for="inputNumero2">Celular 2:</label>
+                     <input type="text" name="celular2" id="inputNumero2" class="inputNumero" data-inputNumero2 onkeypress="mascaraTelefone(this);EnterTab('inputIdade')" />
+                  </div>
+
+                  <div class="campos--comuns campos__idade">
+                     <label for="inputIdade">Idade:<b class="asterisco">*</b></label>
+                     <input type="text" name="idade" id="inputIdade" class="inputIdade" data-inputIdade onkeypress="mascaraIdade(this);EnterTab('inputEndereco')" required minlength="7" />
+                     <b class="input--descricao">Ex: 20 anos, 30 anos, 40 anos</b>
+                  </div>
+
+                  <div class="campos--comuns campos__endereco">
+                     <label for="inputEndereco">Endereço residencial:<b class="asterisco">*</b></label>
+                     <input type="text" name="endereco" id="inputEndereco" class="inputEndereco" data-inputEndereco onkeypress="EnterTab('inputBairro')" required />
+                     <b class="input--descricao">Ex: Rua Fulano Silva, nº 1000, apto 701</b>
+                  </div>
+
+                  <div class="campos--comuns campos__bairro">
+                     <label for="inputBairro">Bairro:<b class="asterisco">*</b></label>
+                     <input type="text" name="bairro" id="inputBairro" class="inputBairro" data-inputBairro onkeypress="EnterTab('inputCep')" required />
+                  </div>
+
+                  <div class="campos--comuns campos__cep">
+                     <label for="inputCep">CEP:<b class="asterisco">*</b></label>
+                     <input type="text" name="cep" id="inputCep" class="inputCep" data-inputCep onkeypress="mascaraCep(this);EnterTab('inputEstado')" required pattern="[0-9{5}]+-[0-9]{3}$" title="ex:12345-678" />
+                  </div>
+
+                  <div class="campos--comuns campos__estado">
+                     <label for="inputEstado">Estado:<b class="asterisco">*</b></label>
+                     <input list="estados" id="inputEstado" class="inputEstado" data-inputEstado name="estado" onkeypress="EnterTab('inputCidade')" required pattern="[A-Z]{2}" title="ex:PE" />
+                     <datalist id="estados">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </datalist>
+                  </div>
+
+                  <div class="campos--comuns campos__cidade">
+                     <label for="inputCidade">Cidade:<b class="asterisco">*</b></label>
+                     <input type="text" name="cidade" id="inputCidade" class="inputCidade" data-inputCidade onkeypress="EnterTab('inputEmail')" required />
+                  </div>
+
+                  <div class="campos--comuns campos__email">
+                     <label for="inputEmail">E-mail:<b class="asterisco">*</b></label>
+                     <input type="text" name="email" id="inputEmail" class="inputEmail" data-imputEmail onkeypress="EnterTab('inputLinkedin')" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="ex:seu@email.com" />
+                  </div>
+
+                  <div class="campos__redesSociais">
+
+                     <h4 class="subtopicos">Redes sociais</h4>
+                     <div class="campos--comuns campos__redesSociais__linkedin campos--comuns--espacamentos">
+                        <label for="inputLinkedin">LinkedIn:</label>
+                        <input type="url" name="linkedin" id="inputLinkedin" class="inputLinkedin" data-inputLinkedin placeholder="www.linkedin.com/in/..." onkeypress="EnterTab('inputEmpregado')" />
+                     </div>
+                        
+                  </div>
+
+                  <div class="campos__informacoesAdicionais">
+
+                     <h4 class="subtopicos">Informações adicionais</h4>
+
+                     <div class="campos--comuns campos__informacoesAdicionais__empregado campos--comuns--espacamentos">
+                        <label for="inputEmpregado">Está empregado atualmente:</label>
+                        <input list="opcoesEmpregado" id="inputEmpregado" class="inputEmpregado" data-inputEmpregado name="empregado" onkeypress="EnterTab('inputHabilitacao')" />
+                        <datalist id="opcoesEmpregado">
+
+                           <option value="Sim">
+                           <option value="Não">
+
+                        </datalist>
+                     </div>
+
+                     <div class="campos--comuns campos__informacoesAdicionais__habilitacao campos--comuns--espacamentos">
+                        <label for="inputHabilitacao">Carteira de habilitação:</label>
+                        <input list="opcoesHabilitacao" id="inputHabilitacao" class="inputHabilitacao" data-inputHabilitacao name="habilitacao" onkeypress="EnterTab('inputAutomovel')" />
+                        <datalist id="opcoesHabilitacao">
+
+                           <option value="Não possui">
+                           <option value="A">
+                           <option value="AB">
+                           <option value="AC">
+                           <option value="AD">
+                           <option value="AE">
+                           <option value="B">
+                           <option value="C">
+                           <option value="D">
+                           <option value="E">
+
+                        </datalist>
+                     </div>
+
+                     <div class="campos--comuns campos__informacoesAdicionais__automovel campos--comuns--espacamentos">
+                        <label for="inputAutomovel">Possui automóvel próprio:</label>
+                        <input list="opcoesAutomovel" id="inputAutomovel" class="inputAutomovel" data-inputAutomovel name="automovel" onkeypress="EnterTab('inputViagens')" />
+                        <datalist id="opcoesAutomovel">
+
+                           <option value="Carro">
+                           <option value="Moto">
+                           <option value="Não possui">
+
+                        </datalist>
+                     </div>
+
+                     <div class="campos--comuns campos__informacoesAdicionais__viagens campos--comuns--espacamentos">
+                        <label for="inputViagens">Disponibilidade para viagens:</label>
+                        <input list="opcoesViagens" id="inputViagens" class="inputViagens" data-inputViagens name="viagens" onkeypress="EnterTab('inputMudarSe')" />
+                        <datalist id="opcoesViagens">
+
+                           <option value="Sim">
+                           <option value="Não">
+
+                        </datalist>
+                     </div>
+
+                     <div class="campos--comuns campos__informacoesAdicionais__mudarSe campos--comuns--espacamentos">
+                        <label for="inputMudarSe">Disponibilidade para mudar-se:</label>
+                        <input list="opcoesMudarSe" id="inputMudarSe" class="inputMudarSe" data-inputMudarSe name="mudarSe" onkeypress="EnterTab('inputEscolaridade')" />
+                        <datalist id="opcoesMudarSe">
+
+                           <option value="Sim">
+                           <option value="Não">
+
+                        </datalist>
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="dados formacaoEConhecimentos">
+
+               <div class="cabecalhoTopico">
+                  <div class="cabecalhoTopico">
+                     <img class="cabecalhoTopico__imagem" src="https://cdn-icons-png.flaticon.com/128/42/42972.png" loading="lazy">
+                     <h2 class="cabecalhoTopico__titulo">Formação e Conhecimentos</h2>
+                     <div class="cabecalhoTopico__camposObrigatorios">
+                        <p><b class="asterisco">*</b> Campos obrigatórios</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="campos">
+
+                  <div class="campos__formacao">
+
+                     <h4 class="subtopicos">Formação</h4>
+                     <div class="campos--comuns campos__formacao__escolaridade">
+                        <label for="inputEscolaridade">Escolaridade:<b class="asterisco">*</b></label>
+                        <input list="opcoesEscolaridade" id="inputEscolaridade" class="inputEscolaridade" data-inputEscolaridade name="escolaridade" onkeypress="grauEscolaridade()" required />
+                        <datalist id="opcoesEscolaridade">
+
+                           <option value="Analfabeto">
+                           <option value="Ensino fundamental (1º grau) incompleto">
+                           <option value="Ensino fundamental (1º grau) completo">
+                           <option value="Ensino médio (2º grau) incompleto">
+                           <option value="Ensino médio (2º grau) em andamento">
+                           <option value="Ensino médio (2º grau) completo">
+                           <option value="Ensino médio (2º grau) Técnico incompleto">
+                           <option value="Ensino médio (2º grau) Técnico em andamento">
+                           <option value="Ensino médio (2º grau) Técnico completo">
+                           <option value="Técnico incompleto">
+                           <option value="Técnico em andamento">
+                           <option value="Técnico completo">
+                           <option value="Ensino superior (3º grau) incompleto">
+                           <option value="Ensino superior (3º grau) em andamento">
+                           <option value="Ensino superior (3º grau) completo">
+                           <option value="Doutorado incompleto">
+                           <option value="Doutorado em andamento">
+                           <option value="Doutorado completo">
+                           <option value="Mestrado incompleto">
+                           <option value="Mestrado em andamento">
+                           <option value="Mestrado completo">
+                           <option value="Pós-doutorado incompleto">
+                           <option value="Pós-doutorado em andamento">
+                           <option value="Pós-doutorado completo">
+                           <option value="Pós-graduação/Especialização incompleto">
+                           <option value="Pós-graduação/Especialização em andamento">
+                           <option value="Pós-graduação/Especialização completo">
+                           <option value="Pós-graduação/MBA incompleto">
+                           <option value="Pós-graduação/MBA em andamento">
+                           <option value="Pós-graduação/MBA completo">
+
+                        </datalist>
+                     </div>
+
+                     <div class="campos--comuns campos__formacao__curso" data-curso></div>
+
+                     <div class="campos--comuns campos__formacao__semestre" data-semestre></div>
+
+                     <div class="campos--comuns campos__formacao__instituicao" data-instituicao></div>
+
+                     <div class="campos--comuns campos__formacao__duracao" data-duracao></div>
+
+                     <div class="campos--comuns campos__formacao__conclusao" data-conclusao></div>
+                        
+                  </div>
+
+                  <div data-campos-cursosOuEventos>
+
+                     <div class="campos__cursosOuEventos">
+                        <h4 class="subtopicos">Participação em Cursos ou Eventos</h4>
+                        <div class="campos--comuns campos__cursosOuEventos__cursoEvento">
+                           <label for="inputCursoEvento1">Curso/Evento:</label>
+                           <input type="text" name="cursoOuEvento1" id="inputCursoEvento1" class="inputCurso" data-inputCursoEvento1>
+                        </div>
+   
+                        <div class="campos--comuns campos__cursosOuEventos__instituicao">
+                           <label for="inputInstituicaoCurso1">Instituição:</label>
+                           <input type="text" name="instituicaoCurso1" id="inputInstituicaoCurso1" class="inputInstituicao" data-inputInstituicaoCurso1>
+                        </div>
+   
+                        <div class="campos--comuns campos__cursosOuEventos__duracao">
+                           <label for="inputDuracaoCurso1">Duração:</label>
+                           <input type="text" name="duracaoCurso1" id="inputDuracaoCurso1" class="inputDuracao" data-inputDuracaoCurso1>
+                           <b class="input--descricao">Ex: 8 horas, 2 meses, 1 ano</b>
+                        </div>
+   
+                        <div class="campos--comuns campos__cursosOuEventos__conclusao">
+                           <label for="inputConclusaoCurso1">Ano de conclusão:</label>
+                           <input type="text" name="conclusaoCurso1" id="inputConclusaoCurso1" class="inputConclusao" data-inputConclusaoCurso1>
+                           <b class="input--descricao">Somente números</b>
+                        </div>
+
+                        <div class="campos--comuns campos__cursosOuEventos__descricao">
+                           <label for="textareaDescricaoCurso1">Descrição:</label>
+                           <textarea name="descricaoCurso1" id="textareaDescricaoCurso1" class="textarea--padrao" data-textareaDescricaoCurso1 cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <input type="button" id="inputButton-adicionarCursos" class="inputButton" data-inputButton-adicionarCursos onclick="botaoAdicionarCursos()" value="Adicionar + Cursos/Eventos">
+
+               </div>
+
+            </div>
+
+            <div class="dados objetivosEExperiencias">
+
+               <div class="cabecalhoTopico">
+                  <div class="cabecalhoTopico">
+                     <img class="cabecalhoTopico__imagem" src="https://cdn-icons-png.flaticon.com/128/3971/3971341.png" loading="lazy">
+                     <h2 class="cabecalhoTopico__titulo">Objetivos e experiências</h2>
+                     <div class="cabecalhoTopico__camposObrigatorios">
+                        <p><b class="asterisco">*</b> Campos obrigatórios</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="campos">
+
+                  <div class="campos--comuns campos__objetivosProfissionais">
+                     <label for="objetivos" class="subtopicos">Objetivos Profissionais<b class="asterisco">*</b></label>
+                     <textarea name="objetivos" id="objetivos" data-objetivos cols="60" rows="12" class="textarea--padrao" required minlength="50"></textarea>
+                  </div>
+
+                  <div class="campos--comuns campos__miniCurriculo">
+                     <label for="resumo" class="subtopicos">Resumo profissional ou Mini-currículo<b class="asterisco">*</b></label>
+                     <textarea name="resumo" id="resumo" data-resumo cols="60" rows="12" class="textarea--padrao" required minlength="50"></textarea>
+                  </div>
+
+                  <div class="campos__experiencias">
+
+                     <div data-campos-experiencias>
+                        <h3 class="subtopicos">Experiências Profissionais</h3>
+
+                        <div class="campos--comuns campos__experiencias__nomeDaEmpresa campos--comuns--espacamentos">
+                           <label for="inputNomeDaEmpresa1">Nome da empresa:</label>
+                           <input type="text" name="nomeDaEmpresa1" id="inputNomeDaEmpresa1" class="inputNomeDaEmpresa" data-inputNomeDaEmpresa1 />
+                        </div>
+
+                        <div class="campos--comuns campos__experiencias__cargo campos--comuns--espacamentos">
+                           <label for="inputCargo1">Cargo:</label>
+                           <input type="text" name="cargo1" id="inputCargo1" class="inputCargo" data-inputCargo1 />
+                        </div>
+
+                        <div class="campos--comuns campos__experiencias__estadoDaEmpresa campos--comuns--espacamentos">
+                           <label for="inputEstadoDaEmpresa1">Estado:</label>
+                           <input list="estados" id="inputEstadoDaEmpresa1" class="inputEstadoDaEmpresa" data-inputEstadoDaEmpresa1 name="estadoDaEmpresa1" pattern="[A-Z]{2}" title="ex:PE" />
+                        </div>
+
+                        <div class="campos--comuns campos__experiencias__cidadeDaEmpresa campos--comuns--espacamentos">
+                           <label for="inputCidadeDaEmpresa1">Cidade:</label>
+                           <input type="text" name="cidadeDaEmpresa1" id="inputCidadeDaEmpresa1" class="inputCidadeDaEmpresa" data-inputCidadeDaEmpresa1 />
+                        </div>
+
+                        <div class="campos__experiencias__periodo campos--comuns--espacamentos">
+
+                           <h4 class="subtopicos">Período</h4>
+
+                           <div class="campos--comuns campos__experiencias__periodo__inicio campos--comuns--espacamentos">
+                              <label for="inputInicio1">Início:</label>
+                              <input type="date" name="periodoInicio1" id="inputInicio1" class="inputInicio" data-inputInicio1>
+                           </div>
+
+                           <div class="cmapos--comuns campos__experiencias__periodo__final campos--comuns--espacamentos" data-periodo-final1>
+                              <label for="inputFinal1">Final:</label>
+                              <input type="date" name="periodoFinal1" id="inputFinal1" class="inputFinal" data-inputFinal1>
+                           </div>
+
+                           <div class="campos--comuns campos__experiencias__periodo__atualmente campos--comuns--espacamentos">
+                              <input type="checkbox" name="periodoAtualmente1" id="inputAtualmente1" class="inputAtualmente" data-inputAtualmente1 onclick="check1()">
+                              <label for="inputAtualmente1">Atualmente trabalho na empresa</label>
+                           </div>
+
+                        </div>
+
+                        <div class="campos--comuns campos__experiencias__atividades campos--comuns--espacamentos">
+                           <label for="principaisAtividades1">Principais atividades:</label>
+                           <textarea name="principaisAtividades1" id="principaisAtividades1" cols="30" rows="10" class="principaisAtividades textarea--padrao" data-principaisAtividades1></textarea>
+                        </div>
+
+                     </div>
+
+                     <input type="button" id="inputButton-adicionarExperiencia" class="inputButton" data-inputButton-adicionarExperiencia onclick="botaoAdicionarExperiencia()" value="Adicionar + experiências">
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="botoes">
+               <input type="submit" id="inputButton" class="inputButton" data-inputButton value="Salvar">
+               <button id="visualizarCurriculo" class="visualizarCurriculo"><a href="curriculo.html">Visualizar currículo</a></button>
+           </div>
+
+         </form>
+         
+
+      </main>
+
+      <footer>
+         <p class="copyright">© Copyright Meu Currículo em Destaque - 2019</p>
+      </footer>
+      <script src="./JS/tipoEscolaridade.js"></script>
+      <script type="text/javascript" src="JS/script.js"></script>
+   </body>
+</html>

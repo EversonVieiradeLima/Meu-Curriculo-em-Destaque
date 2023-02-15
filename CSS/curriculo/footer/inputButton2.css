@@ -1,0 +1,17 @@
+.inputButton2 {
+   margin-right: 6rem;
+}
+
+.inputButton2 {
+   padding: 1rem;
+   font-weight: bold;
+   background: #f6ae2d;
+   border: none;
+   border-radius: 5px;
+   transition: background .3s;
+}
+
+.inputButton2:hover {
+   cursor: pointer;
+   background: #f89512;
+}

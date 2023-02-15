@@ -1,0 +1,10 @@
+main {
+   margin: 0rem 8rem 0rem 8rem;
+   font-family: sans-serif;
+}
+
+@media print {
+   main {
+      margin: 0 2rem;
+   }
+}

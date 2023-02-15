@@ -1,0 +1,41 @@
+/*                   LISTA DE LINKS DE ÍCONES UTILIZADOS
+
+Link imagem Dados Pessoais: https://cdn-icons-png.flaticon.com/128/3106/3106921.png 
+
+Link imagem Formação: https://cdn-icons-png.flaticon.com/128/5404/5404967.png
+
+Link imagem Objetivos: https://cdn-icons-png.flaticon.com/128/3971/3971341.png
+
+Link imagem Deficiência: https://cdn-icons-png.flaticon.com/128/1436/1436218.png
+
+Link imagem Projetos: https://cdn-icons-png.flaticon.com/128/7570/7570378.png
+
+Link imagem Foto: https://cdn-icons-png.flaticon.com/128/880/880974.png
+
+Link imagem Visualizar Currículo: https://cdn-icons-png.flaticon.com/128/3016/3016428.png
+
+*/
+____________________________________________________________________________________________________________
+
+/*       DEFINIÇÃO DOS ATRIBUTOS
+
+class: só para estilização;
+
+id: Para acossiação de label com input e definição de foco para outro elemento ao pressionar a tecla Enter ;
+
+data-attribute: Para JavaScript;
+
+*/
+____________________________________________________________________________________________________________
+
+/*       NOMES DE ATRIBUTOS
+
+bloco  /  blocoPrincipal
+
+bloco__elemento
+
+bloco--modificador
+
+bloco__elemento--modificador
+
+*/

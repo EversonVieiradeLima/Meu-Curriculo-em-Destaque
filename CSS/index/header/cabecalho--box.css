@@ -1,0 +1,6 @@
+.cabecalho--box {
+   display: flex;
+   align-items: center;
+   background-image: linear-gradient(to bottom, #000511, #070d19 12%);
+   border-radius: 5px;
+}

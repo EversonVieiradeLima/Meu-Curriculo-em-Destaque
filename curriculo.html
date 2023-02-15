@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/reset.css" />
+        <link rel="stylesheet" href="./CSS/curriculo/bordaCurriculo.css">
+        <link rel="stylesheet" href="./CSS/curriculo/header/header.css">
+        <link rel="stylesheet" href="./CSS/curriculo/header/picture.css">
+        <link rel="stylesheet" href="./CSS/curriculo/header/picture-input.css">
+        <link rel="stylesheet" href="./CSS/curriculo/header/nomeCompleto.css">
+        <link rel="stylesheet" href="./CSS/curriculo/header/picture-img.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/main.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/conteudo.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/ladoEsquerdo/ladoEsquerdo.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/option.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/styleGeral.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/ladoDireito/ladoDireito.css">
+
+        <link rel="stylesheet" href="./CSS/curriculo/main/formacao/formacao.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/formacao/curso.css">
+
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/experienciaProfissional.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/cargos.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/cargo.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/nomeDaEmpresa.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/cidadeEstado.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/estadoDaEmpresa.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/periodo.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/periodoInicio.css">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/periodoFinal.css ">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/periodoAtualmenteDiv.css ">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/atividade.css ">
+        <link rel="stylesheet" href="./CSS/curriculo/main/experienciaProfissional/atividades.css ">
+
+        <link rel="stylesheet" href="./CSS/curriculo/footer/footer.css">
+        <link rel="stylesheet" href="./CSS/curriculo/footer/inputButton2.css">
+        <link rel="stylesheet" href="./CSS/curriculo/footer/imprimir.css">
+        <link rel="stylesheet" href="./CSS/curriculo/footer/atencao.css">
+
+        <script src="./JS/tipoEscolaridade.js" defer></script>
+        <script type="text/javascript" src="./JS/curriculo.js" defer></script>
+        <title>Currículo</title>
+    </head>
+    <body>
+        <div class="borda">
+
+            <header>
+                <div id="photo" class="photo" data-photo>
+                    <label class="picture" tabindex="0">
+                        <input type="file" accept="image/*" class="picture__input" data-picture-input />
+                        <span class="picture__image" data-picture-image></span>
+                    </label>
+                </div>
+                <div class="fullName">
+                    <h1 class="nomeCompleto" data-nomeCompleto></h1>
+                </div>
+            </header>
+    
+            <main>
+    
+                <div class="topico1">
+    
+                    <div class="conteudo">
+    
+                        <div class="ladoEsquerdo">
+    
+                            <div id="nacionalidade" data-nacionalidade>
+                            </div>
+    
+                            <div id="idade" data-idade>
+                            </div>
+    
+                            <div id="celular1">
+                                <div id="numero1" data-numero1>
+                                </div>
+                            </div>
+    
+                            <div id="celular2">
+                                <div id="numero2" data-Numero2>
+                                </div>
+                            </div>
+    
+                            <div id="empregado" data-empregado>   
+                            </div>
+    
+                            <div id="habilitacao" data-habilitacao>
+                            </div>
+                            
+                            <div id="automovel" data-automovel>
+                            </div>
+        
+                        </div>
+    
+                        <div class="ladoDireito">
+    
+                            <div id="endereco" data-endereco>
+                            </div>
+    
+                            <div id="bairro" data-bairro>
+                            </div>
+    
+                            <div id="conjunto_localizacao">
+                                <div id="cep" data-cep>
+                                </div>
+        
+                                <div id="cidade" data-cidade>
+                                </div>
+        
+                                <div id="estado" data-estado>
+                                </div>
+                            </div>
+    
+                            <div id="email" data-email>
+                            </div>
+    
+                            <div id="linkedin" data-linkedin>
+                            </div>
+    
+                            <div id="viagem" data-viagem>
+                            </div>
+    
+                            <div id="mudarSe" data-mudarSe>
+                            </div>
+                            
+                        </div>
+    
+                    </div>
+    
+                    <div class="resumo_objetivos">
+    
+                        <div id="resumo" data-resumo>
+                        </div>
+    
+                        <div id="objetivos" data-objetivos>
+                        </div>
+    
+                    </div>
+    
+                    <div class="formacao">
+    
+                        <div id="escolaridade" data-escolaridade>
+                        </div>
+    
+                        <div id="curso" class="curso" data-curso>
+                        </div>
+    
+                        <div id="instituicao" data-instituicao>
+                        </div>
+    
+                        <div id="semestre" data-semestre>
+                        </div>
+    
+                        <div id="duracao" data-duracao>
+                        </div>
+    
+                        <div id="anoConclusao" data-anoConclusao>
+                        </div>
+    
+                    </div>
+    
+                    <div class="experienciaProfissional">
+    
+                        <div id="cargo1" class="cargos" data-cargo1>
+                        </div>
+    
+                        <div id="nomeDaEmpresa1" data-nomeDaEmpresa1>
+                        </div>
+                        
+                        <div class="cidadeEstado">
+                            <div id="cidadeDaEmpresa1" data-cidadeDaEmpresa1>
+                            </div>
+        
+                            <div id="estadoDaEmpresa1" class="estadoDaEmpresa" data-estadoDaEmpresa1>
+                            </div>
+                        </div>
+    
+                        <div id="periodo1" class="periodo" data-periodo1>
+                            <div id="periodoInicio1" class="periodoInicio" data-periodoInicio1></div>
+                            <div id="periodoFinal1" class="periodoFinal" data-periodoFinal1></div>
+                            <div id="periodoAtualmente1" class="periodoAtualmenteDiv" data-periodoAtualmente1></div>
+                        </div>
+    
+                        <div id="atividades1" class="atividade" data-atividades1>
+                        </div>
+    
+                    </div>
+    
+                    <div class="experienciaProfissional">
+    
+                        <div id="cargo2" class="cargos" data-cargo2>
+                        </div>
+    
+                        <div id="nomeDaEmpresa2" data-nomeDaEmpresa2>
+                        </div>
+                        
+                        <div class="cidadeEstado">
+                            <div id="cidadeDaEmpresa2" data-cidadeDaEmpresa2>
+                            </div>
+        
+                            <div id="estadoDaEmpresa2" class="estadoDaEmpresa" data-estadoDaEmpresa2>
+                            </div>
+                        </div>
+    
+                        <div id="periodo2" class="periodo" data-periodo2>
+                            <div id="periodoInicio2" class="periodoInicio" data-periodoInicio2></div>
+                            <div id="periodoFinal2" class="periodoFinal" data-periodoFinal2></div>
+                            <div id="periodoAtualmente2" class="periodoAtualmenteDiv" data-periodoAtualmente2></div>
+                        </div>
+    
+                        <div id="atividades2" class="atividade" data-atividades2>
+                        </div>
+    
+                    </div>
+    
+                    <div class="experienciaProfissional">
+    
+                        <div id="cargo3" class="cargos" data-cargo3>
+                        </div>
+    
+                        <div id="nomeDaEmpresa3" data-nomeDaEmpresa3>
+                        </div>
+    
+                        <div class="cidadeEstado">
+                            <div id="cidadeDaEmpresa3" data-cidadeDaEmpresa3>
+                            </div>
+        
+                            <div id="estadoDaEmpresa3" class="estadoDaEmpresa" data-estadoDaEmpresa3>
+                            </div>
+                        </div>
+    
+                        <div id="periodo3" class="periodo" data-periodo3>
+                            <div id="periodoInicio3" class="periodoInicio" data-periodoInicio3></div>
+                            <div id="periodoFinal3" class="periodoFinal" data-periodoFinal3></div>
+                            <div id="periodoAtualmente3" class="periodoAtualmenteDiv" data-periodoAtualmente3></div>
+                        </div>
+    
+                        <div id="atividades3" class="atividade" data-atividades3>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </main>
+
+        </div>
+
+        <footer>
+            <input type="button" id="inputButton2" class="inputButton2" data-inputButton2 value="Visualizar currículo">
+            <button id="imprimir" class="imprimir" data-imprimir onclick="botaoimprimir();window.print()">Imprimir / Salvar PDF</button>
+
+            <p id="atencao" class="atencao" data-atencao>Atenção: Clique em "Imprimir / Salvar PDF" para visualizar como seu currículo ficará realmente!</p>
+        </footer>
+
+        
+        
+    </body>
+</html>

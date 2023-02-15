@@ -1,0 +1,23 @@
+#visualizarCurriculo {
+   border-radius: 0.4375rem;
+   font-weight: bold;
+   background: #ffbe0b;
+   padding: 1rem;
+   border: none;
+   transition: background .3s;
+}
+
+#visualizarCurriculo:hover {
+   cursor: pointer;
+   background: #fba300;
+}
+
+#visualizarCurriculo:active {
+   background:  #070d19;
+   color: white;
+}
+
+#visualizarCurriculo a {
+   color: black;
+   text-decoration: none;
+}

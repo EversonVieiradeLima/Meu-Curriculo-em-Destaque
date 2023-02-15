@@ -1,0 +1,13 @@
+.textarea--padrao {
+   display: block;
+   margin: 0 0 1.25rem;
+   padding: 0.625rem 1.25rem;
+   width: 80%;
+   resize: none;
+   font-family: sans-serif;
+   border-radius: 5px;
+   border: 2px solid #ffbe0b;
+   background: none;
+   color: white;
+   outline: none;
+}
