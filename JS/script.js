@@ -142,12 +142,12 @@ function check3() {
     check("[data-inputAtualmente3]", "[data-periodo-final3]");
 }
 
-let contadorGeral = 1;
+let contadorDeExperiencias = 1;
 document.querySelector("[data-inputButton-adicionarExperiencia]").addEventListener("click", function() {
-    let numero = parseInt(contadorGeral) + 1;
-    contadorGeral = numero;
+    let numero = parseInt(contadorDeExperiencias) + 1;
+    contadorDeExperiencias = numero;
     
-    if(contadorGeral == 3) {
+    if(contadorDeExperiencias == 3) {
         const deletBotao = document.querySelector("[data-inputButton-adicionarExperiencia]");
         deletBotao.parentNode.removeChild(deletBotao);
     }
@@ -311,11 +311,12 @@ function botaoAdicionarExperiencia() {
 
 };
 
+let contadorDeCursos = 1;
 document.querySelector("[data-inputButton-adicionarCursos]").addEventListener("click", function() {
-    let numero = parseInt(contadorGeral) + 1;
-    contadorGeral = numero;
+    let numero = parseInt(contadorDeCursos) + 1;
+    contadorDeCursos = numero;
 
-    if(contadorGeral == 5) {
+    if(contadorDeCursos == 5) {
         const deletBotao = document.querySelector("[data-inputButton-adicionarCursos]");
         deletBotao.parentNode.removeChild(deletBotao);
     }
@@ -440,7 +441,7 @@ btn.addEventListener("click", function() {
     const atividades1 = document.querySelector("[data-principaisAtividades1]").value;
 
 
-    if(contadorGeral > 1) {
+    if(contadorDeExperiencias > 1) {
         const nomeDaEmpresa2 = document.querySelector("[data-inputNomeDaEmpresa2]").value;
         const cargo2 = document.querySelector("[data-inputCargo2]").value;
         const estadoDaEmpresa2 = document.querySelector("[data-inputEstadoDaEmpresa2]").value;
@@ -465,7 +466,7 @@ btn.addEventListener("click", function() {
         localStorage.setItem('valueAtividades2', atividades2);
     }
 
-    if(contadorGeral == 3) {
+    if(contadorDeExperiencias == 3) {
         const nomeDaEmpresa3 = document.querySelector("[data-inputNomeDaEmpresa3]").value;
         const cargo3 = document.querySelector("[data-inputCargo3]").value;
         const estadoDaEmpresa3 = document.querySelector("[data-inputEstadoDaEmpresa3]").value;
