@@ -108,9 +108,91 @@ function grauEscolaridade() {
     curso('[data-instituicao]', 'Instituição:', 'instituicao', 'inputInstituicao', 'inputInstituicao', "EnterTab('inputDuracao')", 'data-inputInstituicao', '');
     curso('[data-duracao]', 'Duração:', 'duracao', 'inputDuracao', 'inputDuracao', "EnterTab('inputConclusao')", 'data-inputDuracao', 'Ex: 8 horas, 2 meses, 1 ano');
     curso('[data-conclusao]', 'Ano de conclusão:', 'anoDeConclusao', 'inputConclusao', 'inputConclusao', "EnterTab('objetivos')", 'data-inputConclusao', 'Somente números');
-
     
+}
 
+let contadorDeCursos = 1;
+document.querySelector("[data-inputButton-adicionarCursos]").addEventListener("click", function() {
+    let numero = parseInt(contadorDeCursos) + 1;
+    contadorDeCursos = numero;
+
+    if(contadorDeCursos == 5) {
+        const deletBotao = document.querySelector("[data-inputButton-adicionarCursos]");
+        deletBotao.parentNode.removeChild(deletBotao);
+    }
+});
+
+let contadorAddCursos = 1;
+
+function botaoAdicionarCursos() {
+    contadorAddCursos ++;
+    const pai = document.querySelector("[data-campos-cursosOuEventos]");
+
+    const adicionarDivTipo1 = function() {
+        const addDivPai = document.createElement('div');
+        addDivPai.setAttribute('class', 'campos__cursosOuEventos');
+
+        const adicionarDivTipo2 = function(classDiv, idInput, descricaoLabel, nameInput, classInput, dataInput, descricaoB) {
+            
+            const addDivFilho = document.createElement('div');
+            addDivFilho.classList.add('campos--comuns');
+            addDivFilho.classList.add(classDiv);
+    
+            const addLabel = document.createElement('label');
+            addLabel.setAttribute('for', idInput);
+            addLabel.textContent = descricaoLabel;
+
+            const addInput = document.createElement('input');
+            addInput.setAttribute('type', 'text');
+            addInput.setAttribute('name', nameInput);
+            addInput.setAttribute('id', idInput);
+            addInput.setAttribute('class', classInput);
+            addInput.setAttribute(dataInput, '');
+
+            const addB = document.createElement('b');
+            addB.setAttribute('class', 'input--descricao');
+            addB.textContent = descricaoB;
+
+            addDivPai.appendChild(addDivFilho);
+            addDivFilho.appendChild(addLabel);
+            addDivFilho.appendChild(addInput);
+            addDivFilho.appendChild(addB);
+        }
+
+        const adicionarDivTipo3 = function() {
+            
+            const addDivFilho = document.createElement('div');
+            addDivFilho.classList.add('campos--comuns');
+            addDivFilho.classList.add('campos__cursosOuEventos__descricao');
+    
+            const addLabel = document.createElement('label');
+            addLabel.setAttribute('for', 'textareaDescricaoCurso' + contadorAddCursos);
+            addLabel.textContent = 'Descrição:';
+
+            const addTextarea = document.createElement('textarea');
+            addTextarea.setAttribute('name', 'descricaoCurso' + contadorAddCursos);
+            addTextarea.setAttribute('id', 'textareaDescricaoCurso' + contadorAddCursos);
+            addTextarea.setAttribute('class', 'textarea--padrao');
+            addTextarea.setAttribute('data-textareaDescricaoCurso' + contadorAddCursos, '');
+            addTextarea.setAttribute('cols', '30');
+            addTextarea.setAttribute('rows', '10');
+
+            addDivPai.appendChild(addDivFilho);
+            addDivFilho.appendChild(addLabel);
+            addDivFilho.appendChild(addTextarea);
+        }
+
+        pai.appendChild(addDivPai);
+
+        adicionarDivTipo2('campos__cursosOuEventos__cursoEvento', 'inputCursoEvento' + contadorAddCursos, 'Curso/Evento:', 'cursoOuEvento' + contadorAddCursos, 'inputCurso', 'data-inputCursoEvento' + contadorAddCursos, '');
+        adicionarDivTipo2('campos__cursosOuEventos__instituicao', 'inputInstituicaoCurso' + contadorAddCursos, 'Instituição:', 'instituicaoCurso' + contadorAddCursos, 'inputInstituicao', 'data-inputInstituicaoCurso' + contadorAddCursos, '');
+        adicionarDivTipo2('campos__cursosOuEventos__duracao', 'inputDuracaoCurso' + contadorAddCursos, 'Duração:', 'duracaoCurso' + contadorAddCursos, 'inputDuracao', 'data-inputDuracaoCurso' + contadorAddCursos, 'Ex: 8 horas, 2 meses, 1 ano');
+        adicionarDivTipo2('campos__cursosOuEventos__conclusao', 'inputConclusaoCurso' + contadorAddCursos, 'Ano de conclusão:', 'conclusaoCurso' + contadorAddCursos, 'inputConclusao', 'data-inputConclusaoCurso' + contadorAddCursos, 'Somente números');
+        adicionarDivTipo3();
+
+    }
+
+    adicionarDivTipo1();
 }
 
 /**
@@ -153,10 +235,10 @@ document.querySelector("[data-inputButton-adicionarExperiencia]").addEventListen
     }
 });
 
-let contadorAdd = 1;
+let contadorAddExperiencia = 1;
 function botaoAdicionarExperiencia() { 
 
-    contadorAdd++
+    contadorAddExperiencia++
     const pai = document.querySelector("[data-campos-experiencias]");
 
     const linhaDivisoria = document.createElement('hr');
@@ -191,15 +273,15 @@ function botaoAdicionarExperiencia() {
         addDiv.classList.add('campos--comuns--espacamentos');
         
         const label = document.createElement('label');
-        label.setAttribute('for', 'inputEstadoDaEmpresa' + contadorAdd);
+        label.setAttribute('for', 'inputEstadoDaEmpresa' + contadorAddExperiencia);
         label.textContent = 'Estado:';
 
         const input = document.createElement('input');
         input.setAttribute('list', 'estados');
-        input.setAttribute('name', 'estadoDaEmpresa' + contadorAdd);
-        input.setAttribute('id', 'inputEstadoDaEmpresa' + contadorAdd);
+        input.setAttribute('name', 'estadoDaEmpresa' + contadorAddExperiencia);
+        input.setAttribute('id', 'inputEstadoDaEmpresa' + contadorAddExperiencia);
         input.setAttribute('class', 'inputEstadoDaEmpresa');
-        input.setAttribute('data-inputEstadoDaEmpresa' + contadorAdd, '');
+        input.setAttribute('data-inputEstadoDaEmpresa' + contadorAddExperiencia, '');
         input.setAttribute('pattern', '[A-Z]{2}');
         input.setAttribute('title', 'ex:PE');
 
@@ -249,14 +331,14 @@ function botaoAdicionarExperiencia() {
             
             const input = document.createElement('input');
             input.setAttribute('type', 'checkbox');
-            input.setAttribute('name', 'periodoAtualmente' + contadorAdd);
-            input.setAttribute('id', 'inputAtualmente' + contadorAdd);
+            input.setAttribute('name', 'periodoAtualmente' + contadorAddExperiencia);
+            input.setAttribute('id', 'inputAtualmente' + contadorAddExperiencia);
             input.setAttribute('class', 'inputAtualmente');
-            input.setAttribute('data-inputAtualmente' + contadorAdd, '');
-            input.setAttribute('onclick', `check${contadorAdd}()`);
+            input.setAttribute('data-inputAtualmente' + contadorAddExperiencia, '');
+            input.setAttribute('onclick', `check${contadorAddExperiencia}()`);
             
             const label = document.createElement('label');
-            label.setAttribute('for', 'inputAtualmente' + contadorAdd);
+            label.setAttribute('for', 'inputAtualmente' + contadorAddExperiencia);
             label.textContent = 'Atualmente trabalho na empresa';
             
             addDivFilho.appendChild(addDivAtualmente);
@@ -267,8 +349,8 @@ function botaoAdicionarExperiencia() {
 
         pai.appendChild(addDivFilho);
         addDivFilho.appendChild(h4);
-        adicionarDivTipo4('campos__experiencias__periodo__inicio', 'data-periodo-inicio' + contadorAdd, 'inputInicio' + contadorAdd, 'Início:', 'periodoInicio' + contadorAdd, 'inputInicio' + contadorAdd, 'inputInicio', 'data-inputInicio' + contadorAdd);
-        adicionarDivTipo4('campos__experiencias__periodo__final', 'data-periodo-final' + contadorAdd, 'inputFinal' + contadorAdd, 'Final:', 'periodoFinal' + contadorAdd, 'inputFinal' + contadorAdd, 'inputFinal', 'data-inputFinal' + contadorAdd);
+        adicionarDivTipo4('campos__experiencias__periodo__inicio', 'data-periodo-inicio' + contadorAddExperiencia, 'inputInicio' + contadorAddExperiencia, 'Início:', 'periodoInicio' + contadorAddExperiencia, 'inputInicio' + contadorAddExperiencia, 'inputInicio', 'data-inputInicio' + contadorAddExperiencia);
+        adicionarDivTipo4('campos__experiencias__periodo__final', 'data-periodo-final' + contadorAddExperiencia, 'inputFinal' + contadorAddExperiencia, 'Final:', 'periodoFinal' + contadorAddExperiencia, 'inputFinal' + contadorAddExperiencia, 'inputFinal', 'data-inputFinal' + contadorAddExperiencia);
         adicionarDivTipo5();
 
     }
@@ -280,120 +362,36 @@ function botaoAdicionarExperiencia() {
         addDiv.classList.add('campos--comuns--espacamentos');
         
         const label = document.createElement('label');
-        label.setAttribute('for', 'principaisAtividades' + contadorAdd);
+        label.setAttribute('for', 'principaisAtividades' + contadorAddExperiencia);
         label.textContent = 'Principais atividades:';
 
         const textarea = document.createElement('textarea');
-        textarea.setAttribute('name', 'principaisAtividades' + contadorAdd)
-        textarea.setAttribute('id', 'inputPrincipaisAtividades' + contadorAdd);
+        textarea.setAttribute('name', 'principaisAtividades' + contadorAddExperiencia)
+        textarea.setAttribute('id', 'inputPrincipaisAtividades' + contadorAddExperiencia);
         textarea.setAttribute('cols', '30');
         textarea.setAttribute('rows', '10');
         textarea.classList.add('inputPrincipaisAtividades');
         textarea.classList.add('textarea--padrao');
-        textarea.setAttribute('data-principaisAtividades' + contadorAdd, '');
+        textarea.setAttribute('data-principaisAtividades' + contadorAddExperiencia, '');
 
         pai.appendChild(addDiv);
         addDiv.appendChild(label);
         addDiv.appendChild(textarea);
     }
 
-    adicionarDivTipo1('campos__experiencias__nomeDaEmpresa', 'inputNomeDaEmpresa' + contadorAdd, 'Nome da empresa:', 'nomeDaEmpresa' + contadorAdd, 'inputNomeDaEmpresa' + contadorAdd, 'inputNomeDaEmpresa', 'data-inputNomeDaEmpresa' + contadorAdd);
+    adicionarDivTipo1('campos__experiencias__nomeDaEmpresa', 'inputNomeDaEmpresa' + contadorAddExperiencia, 'Nome da empresa:', 'nomeDaEmpresa' + contadorAddExperiencia, 'inputNomeDaEmpresa' + contadorAddExperiencia, 'inputNomeDaEmpresa', 'data-inputNomeDaEmpresa' + contadorAddExperiencia);
 
-    adicionarDivTipo1('campos__experiencias__cargo', 'inputCargo' + contadorAdd, 'Cargo:', 'cargo' + contadorAdd, 'inputCargo' + contadorAdd, 'inputCargo', 'data-inputCargo' + contadorAdd);
+    adicionarDivTipo1('campos__experiencias__cargo', 'inputCargo' + contadorAddExperiencia, 'Cargo:', 'cargo' + contadorAddExperiencia, 'inputCargo' + contadorAddExperiencia, 'inputCargo', 'data-inputCargo' + contadorAddExperiencia);
 
     adicionarDivTipo2();
     
-    adicionarDivTipo1('campos__experiencias__cidadeDaEmpresa', 'inputCidadeDaEmpresa' + contadorAdd, 'Cidade:', 'cidadeDaEmpresa' + contadorAdd, 'inputCidadeDaEmpresa' + contadorAdd, 'inputCidadeDaEmpresa', 'data-inputcidadeDaEmpresa' + contadorAdd);
+    adicionarDivTipo1('campos__experiencias__cidadeDaEmpresa', 'inputCidadeDaEmpresa' + contadorAddExperiencia, 'Cidade:', 'cidadeDaEmpresa' + contadorAddExperiencia, 'inputCidadeDaEmpresa' + contadorAddExperiencia, 'inputCidadeDaEmpresa', 'data-inputcidadeDaEmpresa' + contadorAddExperiencia);
 
     adicionarDivTipo3();
 
     adicionarDivTipo6();
 
 };
-
-let contadorDeCursos = 1;
-document.querySelector("[data-inputButton-adicionarCursos]").addEventListener("click", function() {
-    let numero = parseInt(contadorDeCursos) + 1;
-    contadorDeCursos = numero;
-
-    if(contadorDeCursos == 5) {
-        const deletBotao = document.querySelector("[data-inputButton-adicionarCursos]");
-        deletBotao.parentNode.removeChild(deletBotao);
-    }
-});
-
-function botaoAdicionarCursos() {
-    contadorAdd ++;
-    const pai = document.querySelector("[data-campos-cursosOuEventos]");
-
-    const adicionarDivTipo1 = function() {
-        const addDivPai = document.createElement('div');
-        addDivPai.setAttribute('class', 'campos__cursosOuEventos');
-
-        const adicionarDivTipo2 = function(classDiv, idInput, descricaoLabel, nameInput, classInput, dataInput, descricaoB) {
-            
-            const addDivFilho = document.createElement('div');
-            addDivFilho.classList.add('campos--comuns');
-            addDivFilho.classList.add(classDiv);
-    
-            const addLabel = document.createElement('label');
-            addLabel.setAttribute('for', idInput);
-            addLabel.textContent = descricaoLabel;
-
-            const addInput = document.createElement('input');
-            addInput.setAttribute('type', 'text');
-            addInput.setAttribute('name', nameInput);
-            addInput.setAttribute('id', idInput);
-            addInput.setAttribute('class', classInput);
-            addInput.setAttribute(dataInput, '');
-
-            const addB = document.createElement('b');
-            addB.setAttribute('class', 'input--descricao');
-            addB.textContent = descricaoB;
-
-            addDivPai.appendChild(addDivFilho);
-            addDivFilho.appendChild(addLabel);
-            addDivFilho.appendChild(addInput);
-            addDivFilho.appendChild(addB);
-        }
-
-        const adicionarDivTipo3 = function() {
-            
-            const addDivFilho = document.createElement('div');
-            addDivFilho.classList.add('campos--comuns');
-            addDivFilho.classList.add('campos__cursosOuEventos__descricao');
-    
-            const addLabel = document.createElement('label');
-            addLabel.setAttribute('for', 'textareaDescricaoCurso' + contadorAdd);
-            addLabel.textContent = 'Descrição:';
-
-            const addTextarea = document.createElement('textarea');
-            addTextarea.setAttribute('name', 'descricaoCurso' + contadorAdd);
-            addTextarea.setAttribute('id', 'textareaDescricaoCurso' + contadorAdd);
-            addTextarea.setAttribute('class', 'textarea--padrao');
-            addTextarea.setAttribute('data-textareaDescricaoCurso' + contadorAdd, '');
-            addTextarea.setAttribute('cols', '30');
-            addTextarea.setAttribute('rows', '10');
-
-            addDivPai.appendChild(addDivFilho);
-            addDivFilho.appendChild(addLabel);
-            addDivFilho.appendChild(addTextarea);
-        }
-
-        pai.appendChild(addDivPai);
-
-        adicionarDivTipo2('campos__cursosOuEventos__cursoEvento', 'inputCursoEvento' + contadorAdd, 'Curso/Evento:', 'cursoOuEvento' + contadorAdd, 'inputCurso', 'data-inputCursoEvento' + contadorAdd, '');
-        adicionarDivTipo2('campos__cursosOuEventos__instituicao', 'inputInstituicaoCurso' + contadorAdd, 'Instituição:', 'instituicaoCurso' + contadorAdd, 'inputInstituicao', 'data-inputInstituicaoCurso' + contadorAdd, '');
-        adicionarDivTipo2('campos__cursosOuEventos__duracao', 'inputDuracaoCurso' + contadorAdd, 'Duração:', 'duracaoCurso' + contadorAdd, 'inputDuracao', 'data-inputDuracaoCurso' + contadorAdd, 'Ex: 8 horas, 2 meses, 1 ano');
-        adicionarDivTipo2('campos__cursosOuEventos__conclusao', 'inputConclusaoCurso' + contadorAdd, 'Ano de conclusão:', 'conclusaoCurso' + contadorAdd, 'inputConclusao', 'data-inputConclusaoCurso' + contadorAdd, 'Somente números');
-        adicionarDivTipo3();
-
-    }
-
-    adicionarDivTipo1();
-}
-
-
 
 
 const btn = document.querySelector("[data-inputButton]");
