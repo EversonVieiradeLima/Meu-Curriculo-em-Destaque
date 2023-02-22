@@ -270,6 +270,67 @@ function botaoAdicionarIdiomas() {
     
 }
 
+let contadorDeConhecimentosTecnicos = 1;
+document.querySelector("[data-inputButton-adicionarConhecimentosTecnicos]").addEventListener("click", function() {
+    contadorDeConhecimentosTecnicos++;
+
+    if(contadorDeConhecimentosTecnicos == 20) {
+        const deletBotao = document.querySelector("[data-inputButton-adicionarConhecimentosTecnicos]");
+        deletBotao.parentNode.removeChild(deletBotao);
+    }
+});
+
+let contadorAddConhecimentosTecnicos = 1;
+function botaoAdicionarConhecimentosTecnicos() {
+    contadorAddConhecimentosTecnicos++;
+    const pai = document.querySelector("[data-conhecimentosTecnicos]");
+
+    const divPai = document.createElement('div');
+    divPai.setAttribute('class', 'campos__conhecimentosTecnicos');
+
+    const divFilho1 = document.createElement('div');
+    divFilho1.classList.add('campos--comuns');
+    divFilho1.classList.add('campos__conhecimentosTecnicos__conhecimentos');
+
+    const labelFilho1 = document.createElement('label');
+    labelFilho1.setAttribute('for', 'inputConhecimento' + contadorAddConhecimentosTecnicos);
+    labelFilho1.textContent = 'Conhecimentos:';
+
+    const inputFilho1 = document.createElement('input');
+    inputFilho1.setAttribute('name', 'conhecimentoTecnico' + contadorAddConhecimentosTecnicos);
+    inputFilho1.setAttribute('id', 'inputConhecimento' + contadorAddConhecimentosTecnicos);
+    inputFilho1.setAttribute('class', 'inputConhecimento');
+    inputFilho1.setAttribute('data-inputConhecimento' + contadorAddConhecimentosTecnicos, '');
+
+
+    const divFilho2 = document.createElement('div');
+    divFilho2.classList.add('campos--comuns');
+    divFilho2.classList.add('campos__conhecimentosTecnicos__Nivel');
+
+    const labelFilho2 = document.createElement('label');
+    labelFilho2.setAttribute('for', 'inputNivel' + contadorAddConhecimentosTecnicos);
+    labelFilho2.textContent = 'Nível de conhecimento:';
+
+    const inputFilho2 = document.createElement('input');
+    inputFilho2.setAttribute('list', 'niveis')
+    inputFilho2.setAttribute('name', 'nivelConhecimento' + contadorAddConhecimentosTecnicos);
+    inputFilho2.setAttribute('id', 'inputNivel' + contadorAddConhecimentosTecnicos);
+    inputFilho2.setAttribute('class', 'inputNivel');
+    inputFilho2.setAttribute('data-inputNivel' + contadorAddConhecimentosTecnicos, '');
+
+
+    pai.appendChild(divPai);
+
+    divPai.appendChild(divFilho1);
+    divFilho1.appendChild(labelFilho1);
+    divFilho1.appendChild(inputFilho1);
+
+    divPai.appendChild(divFilho2);
+    divFilho2.appendChild(labelFilho2);
+    divFilho2.appendChild(inputFilho2);
+
+}
+
 /**
  * Se a caixa de seleção estiver marcada, oculte a entrada de data. Se a caixa de seleção não estiver marcada,   * mostra a entrada de data.
  * </code>
