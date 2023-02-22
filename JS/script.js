@@ -1,3 +1,10 @@
+/* Evitando que o formulário seja enviado quando o usuário pressiona a tecla enter. */
+document.querySelector("[data-formulario]").addEventListener("keypress", function(e) {
+    if(e.keyCode === 13) {
+        e.preventDefault();
+    }
+});
+
 /**
  * Quando o usuário pressiona a tecla Enter, o foco é definido para o elemento de entrada com o id que é passado * para a função.
  * @param idInput - A ID do campo de entrada que você deseja focar.
