@@ -123,7 +123,6 @@ document.querySelector("[data-inputButton-adicionarCursos]").addEventListener("c
 });
 
 let contadorAddCursos = 1;
-
 function botaoAdicionarCursos() {
     contadorAddCursos ++;
     const pai = document.querySelector("[data-campos-cursosOuEventos]");
@@ -193,6 +192,82 @@ function botaoAdicionarCursos() {
     }
 
     adicionarDivTipo1();
+}
+
+let contadorDeIdiomas = 1;
+document.querySelector("[data-inputButton-adicionarIdiomas]").addEventListener("click", function() {
+    contadorDeIdiomas++;
+
+    if(contadorDeIdiomas == 4) {
+        const deletBotao = document.querySelector("[data-inputButton-adicionarIdiomas]");
+        deletBotao.parentNode.removeChild(deletBotao);
+    }
+});
+
+let contadorAddIdiomas = 1;
+function botaoAdicionarIdiomas() {
+    contadorAddIdiomas++;
+    const pai = document.querySelector("[data-conhecimentosEmIdiomas]");
+
+    const adicionarDivTipo1 = function() {
+        const addDivPai = document.createElement('div');
+        addDivPai.setAttribute('class', 'campos__conhecimentos');
+
+        const adicionarDivTipo2 = function() {
+            const addDivFilho = document.createElement('div');
+            addDivFilho.classList.add('campos--comuns');
+            addDivFilho.classList.add('campos__conhecimentos__idioma');
+
+            const addLabel = document.createElement('label');
+            addLabel.setAttribute('for', 'inputIdioma' + contadorAddIdiomas);
+            addLabel.textContent = 'Idioma:';
+
+            const addInput = document.createElement('input');
+            addInput.setAttribute('type', 'text');
+            addInput.setAttribute('name', 'idioma' + contadorAddIdiomas);
+            addInput.setAttribute('id', 'inputIdioma' + contadorAddIdiomas);
+            addInput.classList.add('inputIdioma');
+            addInput.classList.add('input-idiomas');
+            addInput.setAttribute('data-inputIdioma' + contadorAddIdiomas, '');
+
+            addDivPai.appendChild(addDivFilho);
+            addDivFilho.appendChild(addLabel);
+            addDivFilho.appendChild(addInput);
+        }
+
+        const adicionarDivTipo3 = function(classDiv, idInput, descricaoLabel, nameInput, classInput, dataInput) {
+            const addDivFilho = document.createElement('div');
+            addDivFilho.classList.add('campos--comuns');
+            addDivFilho.classList.add(classDiv);
+
+            const addLabel = document.createElement('label');
+            addLabel.setAttribute('for', idInput + contadorAddIdiomas);
+            addLabel.textContent = descricaoLabel;
+
+            const addInput = document.createElement('input');
+            addInput.setAttribute('list', 'opcoesGrausIdiomas');
+            addInput.setAttribute('name', nameInput + contadorAddIdiomas);
+            addInput.setAttribute('id', idInput + contadorAddIdiomas);
+            addInput.classList.add(classInput);
+            addInput.classList.add('input-idiomas');
+            addInput.setAttribute(dataInput + contadorAddIdiomas, '');
+
+            addDivPai.appendChild(addDivFilho);
+            addDivFilho.appendChild(addLabel);
+            addDivFilho.appendChild(addInput);
+        }
+
+        pai.appendChild(addDivPai);
+
+        adicionarDivTipo2();
+        adicionarDivTipo3('campos__conhecimentos__compreesao', 'inputCompreesao', 'Compreensão:', 'compreesao', 'inputCompreesao', 'data-inputCompreesao');
+        adicionarDivTipo3('campos__conhecimentos__escrita', 'inputEscrita', 'Escrita:', 'escrita', 'inputEscrita', 'data-inputEscrita');
+        adicionarDivTipo3('campos__conhecimentos__fala', 'inputFala', 'Fala:', 'fala', 'inputFala', 'data-inputFala');
+        adicionarDivTipo3('campos__conhecimentos__leitura', 'inputLeitura', 'Leitura:', 'leitura', 'inputLeitura', 'data-inputLeitura');
+    }
+
+    adicionarDivTipo1();
+    
 }
 
 /**
