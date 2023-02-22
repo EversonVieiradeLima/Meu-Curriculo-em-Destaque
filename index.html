@@ -50,6 +50,10 @@
       <link rel="stylesheet" href="./CSS/index/main/campos/campos-cursosOuEventos-descricao.css">
       <link rel="stylesheet" href="./CSS/index/main/idiomas/campos-conhecimentos.css">
       <link rel="stylesheet" href="./CSS/index/main/idiomas/input--idiomas.css">
+      <link rel="stylesheet" href="./CSS/index/main/conhcecimentosTecnicos/campos-conhecimentosTecnicos.css">
+      <link rel="stylesheet" href="./CSS/index/main/conhcecimentosTecnicos/inputConhecimento.css">
+      <link rel="stylesheet" href="./CSS/index/main/conhcecimentosTecnicos/inputNivel.css">
+
       <link rel="stylesheet" href="./CSS/index/main/campos/campos-objetivosProfissionais.css">
       <link rel="stylesheet" href="./CSS/index/main/textarea--padrao.css">
       <link rel="stylesheet" href="./CSS/index/main/campos/campos-miniCurriculo.css">
@@ -402,6 +406,31 @@
                   </div>
 
                   <input type="button" id="inputButton-adicionarIdiomas" class="inputButton" data-inputButton-adicionarIdiomas onclick="botaoAdicionarIdiomas()" value="Adicionar + Idiomas">
+
+                  <div data-conhecimentosTecnicos>
+                     
+                     <div class="campos__conhecimentosTecnicos">
+                        <h4 class="subtopicos">Conhecimentos Técnicos</h4>
+                        <div class="campos--comuns campos__conhecimentosTecnicos__conhecimentos">
+                           <label for="inputConhecimento1">Conhecimentos:</label>
+                           <input type="text" id="inputConhecimento1" class="inputConhecimento" data-inputConhecimento1>
+                        </div>
+
+                        <div class="campos--comuns campos__conhecimentosTecnicos__Nivel">
+                           <label for="inputNivel1">Nível de conhecimento:</label>
+                           <input list="niveis" id="inputNivel1" class="inputNivel" data-inputNivel1>
+                           <datalist id="niveis">
+                              <option value="Básico">
+                              <option value="Intermediário">
+                              <option value="Avançado">
+                              <option value="Especialista">
+                           </datalist>
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <input type="button" id="inputButton-adicionarConhecimentosTecnicos" class="inputButton" data-inputButton-adicionarConhecimentosTecnicos onclick="botaoAdicionarConhecimentosTecnicos()" value="Adicionar + Conhecimentos">
 
                </div>
 
