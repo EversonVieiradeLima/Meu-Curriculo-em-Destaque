@@ -205,7 +205,7 @@ let contadorDeIdiomas = 1;
 document.querySelector("[data-inputButton-adicionarIdiomas]").addEventListener("click", function() {
     contadorDeIdiomas++;
 
-    if(contadorDeIdiomas == 4) {
+    if(contadorDeIdiomas == 3) {
         const deletBotao = document.querySelector("[data-inputButton-adicionarIdiomas]");
         deletBotao.parentNode.removeChild(deletBotao);
     }
@@ -281,7 +281,7 @@ let contadorDeConhecimentosTecnicos = 1;
 document.querySelector("[data-inputButton-adicionarConhecimentosTecnicos]").addEventListener("click", function() {
     contadorDeConhecimentosTecnicos++;
 
-    if(contadorDeConhecimentosTecnicos == 20) {
+    if(contadorDeConhecimentosTecnicos == 5) {
         const deletBotao = document.querySelector("[data-inputButton-adicionarConhecimentosTecnicos]");
         deletBotao.parentNode.removeChild(deletBotao);
     }
@@ -564,6 +564,135 @@ btn.addEventListener("click", function() {
 
     const escolaridade = document.querySelector("[data-inputEscolaridade]").value;
 
+    const cursoOuEvento1 = document.querySelector("[data-inputCursoEvento1]").value;
+    const instituicaoCurso1 = document.querySelector("[data-inputInstituicaoCurso1]").value;
+    const duracaoCurso1 = document.querySelector("[data-inputDuracaoCurso1]").value;
+    const conclusaoCurso1 = document.querySelector("[data-inputConclusaoCurso1]").value;
+    const descricaoCurso1 = document.querySelector("[data-textareaDescricaoCurso1]").value;
+
+    if(contadorDeCursos > 1) {
+        const cursoOuEvento2 = document.querySelector("[data-inputCursoEvento2]").value;
+        const instituicaoCurso2 = document.querySelector("[data-inputInstituicaoCurso2]").value;
+        const duracaoCurso2 = document.querySelector("[data-inputDuracaoCurso2]").value;
+        const conclusaoCurso2 = document.querySelector("[data-inputConclusaoCurso2]").value;
+        const descricaoCurso2 = document.querySelector("[data-textareaDescricaoCurso2]").value;
+
+        localStorage.setItem('velueCursosOuEventos2', cursoOuEvento2);
+        localStorage.setItem('velueInstituicaoCurso2', instituicaoCurso2);
+        localStorage.setItem('velueDuracaoCurso2', duracaoCurso2);
+        localStorage.setItem('velueConslusaoCurso2', conclusaoCurso2);
+        localStorage.setItem('velueDescricaoCurso2', descricaoCurso2);
+    }
+
+    if(contadorDeCursos > 2) {
+        const cursoOuEvento3 = document.querySelector("[data-inputCursoEvento3]").value;
+        const instituicaoCurso3 = document.querySelector("[data-inputInstituicaoCurso3]").value;
+        const duracaoCurso3 = document.querySelector("[data-inputDuracaoCurso3]").value;
+        const conclusaoCurso3 = document.querySelector("[data-inputConclusaoCurso3]").value;
+        const descricaoCurso3 = document.querySelector("[data-textareaDescricaoCurso3]").value;
+
+        localStorage.setItem('velueCursosOuEventos3', cursoOuEvento3);
+        localStorage.setItem('velueInstituicaoCurso3', instituicaoCurso3);
+        localStorage.setItem('velueDuracaoCurso3', duracaoCurso3);
+        localStorage.setItem('velueConslusaoCurso3', conclusaoCurso3);
+        localStorage.setItem('velueDescricaoCurso3', descricaoCurso3);
+    }
+
+    if(contadorDeCursos > 3) {
+        const cursoOuEvento4 = document.querySelector("[data-inputCursoEvento4]").value;
+        const instituicaoCurso4 = document.querySelector("[data-inputInstituicaoCurso4]").value;
+        const duracaoCurso4 = document.querySelector("[data-inputDuracaoCurso4]").value;
+        const conclusaoCurso4 = document.querySelector("[data-inputConclusaoCurso4]").value;
+        const descricaoCurso4 = document.querySelector("[data-textareaDescricaoCurso4]").value;
+
+        localStorage.setItem('velueCursosOuEventos4', cursoOuEvento4);
+        localStorage.setItem('velueInstituicaoCurso4', instituicaoCurso4);
+        localStorage.setItem('velueDuracaoCurso4', duracaoCurso4);
+        localStorage.setItem('velueConslusaoCurso4', conclusaoCurso4);
+        localStorage.setItem('velueDescricaoCurso4', descricaoCurso4);
+    }
+
+    if(contadorDeCursos == 5) {
+        const cursoOuEvento5 = document.querySelector("[data-inputCursoEvento5]").value;
+        const instituicaoCurso5 = document.querySelector("[data-inputInstituicaoCurso5]").value;
+        const duracaoCurso5 = document.querySelector("[data-inputDuracaoCurso5]").value;
+        const conclusaoCurso5 = document.querySelector("[data-inputConclusaoCurso5]").value;
+        const descricaoCurso5 = document.querySelector("[data-textareaDescricaoCurso5]").value;
+
+        localStorage.setItem('velueCursosOuEventos5', cursoOuEvento5);
+        localStorage.setItem('velueInstituicaoCurso5', instituicaoCurso5);
+        localStorage.setItem('velueDuracaoCurso5', duracaoCurso5);
+        localStorage.setItem('velueConslusaoCurso5', conclusaoCurso5);
+        localStorage.setItem('velueDescricaoCurso5', descricaoCurso5);
+    }
+    
+    const idioma1 = document.querySelector("[data-inputIdioma1]").value;
+    const compreensao1 = document.querySelector("[data-inputCompreesao1]").value;
+    const escrita1 = document.querySelector("[data-inputEscrita1]").value;
+    const fala1 = document.querySelector("[data-inputFala1]").value;
+    const leitura1 = document.querySelector("[data-inputLeitura1]").value;
+
+    if(contadorDeIdiomas > 1) {
+        const idioma2 = document.querySelector("[data-inputIdioma2]").value;
+        const compreensao2 = document.querySelector("[data-inputCompreesao2]").value;
+        const escrita2 = document.querySelector("[data-inputEscrita2]").value;
+        const fala2 = document.querySelector("[data-inputFala2]").value;
+        const leitura2 = document.querySelector("[data-inputLeitura2]").value;
+
+        localStorage.setItem('velueIdioma2', idioma2);
+        localStorage.setItem('velueCompreesao2', compreensao2);
+        localStorage.setItem('velueEscrita2', escrita2);
+        localStorage.setItem('velueFala2', fala2);
+        localStorage.setItem('velueLeitura2', leitura2);
+    }
+
+    if(contadorDeIdiomas == 3) {
+        const idioma3 = document.querySelector("[data-inputIdioma3]").value;
+        const compreensao3 = document.querySelector("[data-inputCompreesao3]").value;
+        const escrita3 = document.querySelector("[data-inputEscrita3]").value;
+        const fala3 = document.querySelector("[data-inputFala3]").value;
+        const leitura3 = document.querySelector("[data-inputLeitura3]").value;
+
+        localStorage.setItem('velueIdioma3', idioma3);
+        localStorage.setItem('velueCompreesao3', compreensao3);
+        localStorage.setItem('velueEscrita3', escrita3);
+        localStorage.setItem('velueFala3', fala3);
+        localStorage.setItem('velueLeitura3', leitura3);
+    }
+
+    const conhecimento1 = document.querySelector("[data-inputConhecimento1]").value;
+    const nivelConhecimento1 = document.querySelector("[data-inputNivel1]").value;
+
+    if(contadorDeConhecimentosTecnicos > 1) {
+        const conhecimento2 = document.querySelector("[data-inputConhecimento2]").value;
+        const nivelConhecimento2 = document.querySelector("[data-inputNivel2]").value;
+
+        localStorage.setItem('velueConhecimento2', conhecimento2);
+        localStorage.setItem('velueNivelConhecimento2', nivelConhecimento2);
+    }
+
+    if(contadorDeConhecimentosTecnicos > 2) {
+        const conhecimento3 = document.querySelector("[data-inputConhecimento3]").value;
+        const nivelConhecimento3 = document.querySelector("[data-inputNivel3]").value;
+
+        localStorage.setItem('velueConhecimento3', conhecimento3);
+        localStorage.setItem('velueNivelConhecimento3', nivelConhecimento3);
+    }
+    if(contadorDeConhecimentosTecnicos > 3) {
+        const conhecimento4 = document.querySelector("[data-inputConhecimento4]").value;
+        const nivelConhecimento4 = document.querySelector("[data-inputNivel4]").value;
+
+        localStorage.setItem('velueConhecimento4', conhecimento4);
+        localStorage.setItem('velueNivelConheciment42', nivelConhecimento4);
+    }
+    if(contadorDeConhecimentosTecnicos == 5) {
+        const conhecimento5 = document.querySelector("[data-inputConhecimento5]").value;
+        const nivelConhecimento5 = document.querySelector("[data-inputNivel5]").value;
+
+        localStorage.setItem('velueConhecimento5', conhecimento5);
+        localStorage.setItem('velueNivelConhecimento5', nivelConhecimento5);
+    }
+    
     const objetivos = document.querySelector("[data-objetivos]").value;
     const resumo = document.querySelector("[data-resumo]").value;
     
@@ -656,6 +785,21 @@ btn.addEventListener("click", function() {
     localStorage.setItem('valueMudarSe', mudarSe);
 
     localStorage.setItem('velueEscolaridade', escolaridade);
+
+    localStorage.setItem('velueCursosOuEventos1', cursoOuEvento1);
+    localStorage.setItem('velueInstituicaoCurso1', instituicaoCurso1);
+    localStorage.setItem('velueDuracaoCurso1', duracaoCurso1);
+    localStorage.setItem('velueConslusaoCurso1', conclusaoCurso1);
+    localStorage.setItem('velueDescricaoCurso1', descricaoCurso1);
+    
+    localStorage.setItem('velueIdioma1', idioma1);
+    localStorage.setItem('velueCompreesao1', compreensao1);
+    localStorage.setItem('velueEscrita1', escrita1);
+    localStorage.setItem('velueFala1', fala1);
+    localStorage.setItem('velueLeitura1', leitura1);
+    
+    localStorage.setItem('velueConhecimento1', conhecimento1);
+    localStorage.setItem('velueNivelConhecimento1', nivelConhecimento1);
 
     localStorage.setItem('valueObjetivos', objetivos);
     localStorage.setItem('valueResumo', resumo);
